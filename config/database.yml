@@ -1,0 +1,3 @@
+development:
+  adapter: sqlite3
+  database: db/ruboto-api_development.sqlite3
