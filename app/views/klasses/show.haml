@@ -1,0 +1,12 @@
+%p
+  = @klass.visibility
+%h1= @klass.name
+%ul
+- @klass.methods.each do |method|
+  %li
+    = method.name
+    (
+    = method.parameters.map( &:name ).join( ', ' )
+    )
+= render :partial => 'packages/index', :layout => false
+= render :partial => 'index', :layout => false

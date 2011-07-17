@@ -4,7 +4,7 @@ class CreateMethods < ActiveRecord::Migration
     create_table :methods do | t |
       t.string     :name
       t.string     :return
-      t.boolean    :visibility,   :default => 'public'
+      t.string     :visibility,   :default => 'public'
       t.boolean    :final,        :default => false
       t.boolean    :static,       :default => false
       t.boolean    :abstract,     :default => false

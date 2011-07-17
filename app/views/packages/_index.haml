@@ -1,0 +1,5 @@
+%ul
+- Ruboto::Api::Package.all.each do |package|
+  %li
+    %a{ :href => "/#{ package.name }" }
+      = package.name

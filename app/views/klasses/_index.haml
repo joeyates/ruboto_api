@@ -1,0 +1,5 @@
+%ul
+- @package.klasses.each do |klass|
+  %li
+    %a{ :href => "/#{ @package.name }/#{ klass.name }" }
+      = klass.name

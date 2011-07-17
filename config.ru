@@ -1,7 +1,5 @@
-require './config/environment'
-
-require 'ruboto/api/app'
-run RubotoApiApp
+require ::File.expand_path('../config/environment',  __FILE__)
+run RubotoApi::Application
 
 =begin
 

@@ -5,7 +5,7 @@ class CreateKlasses < ActiveRecord::Migration
       t.string     :name
       t.boolean    :final
       t.string     :extends
-      t.boolean    :visibility,  :default => 'public'
+      t.string     :visibility,  :default => 'public'
       t.boolean    :static,      :default => false
       t.boolean    :abstract,    :default => false
       t.integer    :api_added,   :default => 1
