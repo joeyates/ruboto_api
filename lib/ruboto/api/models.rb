@@ -1,6 +1,6 @@
 
 class Ruboto::Api::Package < ActiveRecord::Base
-  has_many :methods
+  has_many :klasses
 end
 
 class Ruboto::Api::Klass < ActiveRecord::Base
