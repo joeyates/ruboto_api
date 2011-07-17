@@ -15,7 +15,7 @@ require 'ruboto/util/xml_element'
 
 class RubotoApiApp < Sinatra::Base
 
-  get '/' do
+  get '/:package/:klass' do
     api = Ruboto::Api.new
     "#{api.root.name}"
   end
