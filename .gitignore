@@ -1,0 +1,3 @@
+.rvmrc
+android_api.*
+db/*.sqlite3
