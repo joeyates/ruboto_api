@@ -2,7 +2,9 @@ namespace :ruboto do
 
   desc "Import android XML API file"
   task :import => :environment do
-    File.open( ANDROID_API_XML ) do | file |
+    raise "Missing ANDROID_API_XML parameter"                       if   ENV[ 'ANDROID_API_XML' ].nil?
+    raise "The file '#{ ENV[ 'ANDROID_API_XML' ] }' does not exist" if ! File.exist?( ENV[ 'ANDROID_API_XML' ] )
+    File.open( ENV[ 'ANDROID_API_XML' ] ) do | file |
       @doc = Nokogiri::XML( file )
     end
     ActiveRecord::Base.transaction do
